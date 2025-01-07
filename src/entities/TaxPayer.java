@@ -57,17 +57,17 @@ public class TaxPayer {
 	}
 	
 	public Double salaryTax() {
-		double salaryTax = 0.00;
-		if(salaryIncome < 3000.00) {
-			return salaryTax;
+		double month= salaryIncome / 12.0;
+		if(month < 3000.00) {
+			return 0.0;
 		}
-		else if (salaryIncome >= 3000.00 && salaryIncome <= 5000.00){
-			salaryTax = salaryIncome * 10 / 100;
-			return salaryTax;
+		else if (month >= 3000.00 && month <= 5000.00){
+			return salaryIncome * 10 / 100;
+			
 		}
 		else {
-			salaryTax = salaryIncome * 20 / 100;
-			return salaryTax;
+			return salaryIncome * 20 / 100;
+			
 		}
 	}
 	
